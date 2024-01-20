@@ -1,38 +1,75 @@
-/* ParentComponent.css */
-.Container {
+.btn-top{
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+ 
+}
+.btn-top button {
+  
+  background-color:#ddd; 
+  color: #333; 
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  height: 50px;
+  width: 200px;
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-button {
+.Container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.btn-left{
+  display: flex;
+  flex-direction: column;
+  
+}
+.btn-left button {
   padding: 10px;
   border: none;
   color: #fff;
-  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
   transition: background-color 0.3s ease;
-  width: 100px;
+  width: 600px;
   height: 50px;
+  text-align: center;
+  align-items: center;
+
 }
 
-button:hover {
-  background-color: #555;
-}
-
-/* Custom styling for each button */
-button:nth-child(1) {
+.btn-left button:nth-child(1) {
   background-color: #3498db;
 }
 
-button:nth-child(2) {
+.btn-left button:nth-child(2) {
   background-color: #2ecc71;
 }
 
-button:nth-child(3) {
+.btn-left button:nth-child(3) {
   background-color: #e74c3c;
 }
 
-button:nth-child(4) {
+.btn-left button:nth-child(4) {
   background-color: #f39c12;
 }
 
+.btn-right{
+  display: flex;
+  flex-direction: column;
+  
+}
+.btn-right button{
+
+  height: 50px;
+  width: 200px;
+  font-size: 15px ;
+  color: #333;
+  border: none;
+  background-color: white;
+  border-bottom: 2px solid black;
+  margin-right: 100px;
+
+}
