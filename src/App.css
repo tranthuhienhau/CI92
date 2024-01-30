@@ -1,81 +1,51 @@
-.btn-top{
-  display: flex;
- 
-}
-.btn-top button {
-  
-  background-color:#ddd; 
-  color: #333; 
-  padding: 10px;
-  transition: background-color 0.3s ease;
-  height: 50px;
-  width: 200px;
-  border: 1px solid black;
-  font-weight: 600;
-  font-size: 15px;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.Container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  
+#form_hello {
+  max-width: 400px;
+  height: 500px;
+  margin: auto ;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.btn-left{
-  display: flex;
-  flex-direction: column;
-  
-}
-.btn-left button {
-  padding: 10px;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
-  width: 600px;
-  height: 50px;
+
+h3 {
   text-align: center;
-  align-items: center;
-
 }
 
-.btn-left button:nth-child(1) {
-  background-color: #3498db;
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.btn-left button:nth-child(2) {
-  background-color: #2ecc71;
+label {
+  display: block;
+  margin-bottom: 8px;
 }
 
-.btn-left button:nth-child(3) {
-  background-color: #e74c3c;
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
-.btn-left button:nth-child(4) {
-  background-color: #f39c12;
-}
-
-.btn-right{
-  display: flex;
-  flex-direction: column;
-  
-}
-.btn-right button{
-
-  height: 50px;
-  width: 200px;
-  font-size: 15px ;
-  color: #333;
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
   border: none;
-  background-color: white;
-  border-bottom: 2px solid black;
-  margin-right: 100px;
-
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
 }
-button{
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  color: aliceblue;
+
+button:hover {
+  background-color: #45a049;
 }
