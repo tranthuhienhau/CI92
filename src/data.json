@@ -1,242 +1,54 @@
-[
-    {
-        "id": 1,
-        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-        "price": 109.95,
-        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-        "rating": {
-            "rate": 3.9,
-            "count": 120
+{
+    "data": [
+        {
+            "id": "1",
+            "movieName": "Weather With You",
+            "description": "Mùa hè năm đầu cấp Ba, Hodaka bỏ nhà ra đi. Cậu từ một hòn đảo xa xôi hẻo lánh đến Tokyo, nhưng sau đó nhanh chóng rơi vào cảnh túng thiếu và phải sống chuỗi ngày cô đơn. Nhưng cuối cùng cậu đã tìm được công việc: viết bài cho một tạp chí huyền bí. Sau khi cậu bắt đầu công việc, mưa cứ rơi mãi rơi mãi không thôi. Ở một góc thành phố đông đúc và nhộn nhịp, Hodaka đã gặp thiếu nữ tên Hina. Cô sống cùng em trai, luôn vui vẻ và kiên cường. Cô cũng có một sức mạnh vô cùng đặc biệt: “Này, từ bây giờ trời hãy hửng nắng đi nào.” Từng chút một, mưa ngừng rơi, và ánh sáng tuyệt đẹp rọi chiếu những nóc nhà trong thành phố. Chỉ bằng một lời cầu nguyện, cô đã khiến bầu trời trở nên sáng trong.",
+            "image": "",
+            "episode": "01"
+        },
+        {
+            "id": "2",
+            "movieName": "Once Peace",
+            "description": "One Piece là bộ truyện tranh dành cho thiếu niên của tác giả nổi tiếng Oda Eiichiro. Bộ manga này được chuyển thể thành một series anime nhiều tập hài hước, đặc sắc. Phim Đảo Hải Tặc mở đầu câu chuyện bằng cảnh xử tử vua hải tặc Gol D. Roger. Trước khi chết ông đã tiết lộ rằng mình có một kho báu được giấu ngoài biển. Nếu ai tìm thấy kho báu thì chúng sẽ thuộc về người đó. Rất nhiều người gan dạ đã đổ xô ra biển để tìm kiếm kho báu bí ẩn của vua hải tặc Gol D. Roger.",
+            "image": "",
+            "episode": "1018"
+        },
+        {
+            "id": "3",
+            "movieName": "Boruto: Naruto Next Generations",
+            "description": "Boruto: Naruto Next Generations kể về thế hệ sau của Naruto. Bộ phim vẫn lấy bối cảnh là thế giới Ninja nhưng nhân vật chính lần này lại là Uzumaki Boruto, con trai của Uzumaki Naruto và Hyuga Hinata. Đồng hành cùng Naruto trong lần quay lại này là Sarada Uchiha là con gái của Sasuke Uchiha, Sakura Haruno và Mitsuki – “con” của Orochimaru.",
+            "image": "data:image/jpeg;base64,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",
+            "episode": "250"
+        },
+        {
+            "id": "4",
+            "movieName": "Spy X Family",
+            "description": "Bộ phim là phần phim điện ảnh của series anime nổi tiếng Spy x Family. Trong bộ phim lần này, sau khi nhận được yêu cầu thay thế mình trong Chiến dịch Strix, Loid Forger quyết định giúp con gái Anya chiến thắng trong cuộc thi nấu ăn tại Học viện Eden bằng cách nấu bữa ăn yêu thích của hiệu trưởng để tránh bị thay thế khỏi nhiệm vụ mật. Nhưng từ đây, gia đình Forger phát hiện ra bí mật kinh hoàng ảnh hưởng đến hòa bình thế giới",
+            "image": "",
+            "episode": "07"
+        },
+        {
+            "id": "5",
+            "movieName": "Shingeki no kyojin",
+            "description": "Câu chuyện của Đại chiến Titan tập trung vào một nền văn minh bên trong ba bức tường đồ sộ quây tròn đồng tâm, nơi được cho là duy nhất mà nhân loại còn tồn tại. Ba bức tường được đặt tên theo tên ba người con gái của vị vua đầu tiên có tên là Maria, Rose và Sina. Người dân ở đó, được gọi là dân tộc Eldia, đã tin rằng hơn một trăm năm trước, loài người đã bị đẩy đến bờ vực tuyệt chủng sau sự xuất hiện của những người khổng lồ hình dáng con người, được gọi là Titan.",
+            "image": "",
+            "episode": "28"
+        },
+        {
+            "id": "6",
+            "movieName": "Captain Tsubasa",
+            "description": "Tsubasa Oozora là nhân vật chính trong bộ truyện này. Khi còn nhỏ, cậu đã thoát chết nhờ một quả bóng bất ngờ. Điều đó đã thúc đẩy cậu trở thành một fan hâm mộ bóng đá. Câu chuyện tập trung vào các trận đấu bóng đá hấp dẫn, đem lại những bất ngờ cho khán giả. Đây là bản làm lại của 'Tsubasa Giấc mơ sân cỏ', với những chi tiết được thêm hoặc bỏ, để cộng thêm nét đặc trưng vào bộ truyện. Bộ phim này đã làm vợi lên kí ức về tuổi thơ của biết bao người.",
+            "image": "",
+            "episode": "28"
+        },
+        {
+            "id": "7",
+            "movieName": "Ao Ashi",
+            "description": "Ashito Aoi là một cầu thủ bóng đá trẻ, đầy khát vọng đến từ một thị trấn vùng nông thôn ở Nhật Bản. Hy vọng vào được một trường trung học với một câu lạc bộ bóng đá giỏi đã tan thành mây khói khi anh gây ra một sự cố trong một trận đấu quan trọng cho đội của mình, dẫn đến việc họ bị loại khỏi giải đấu. Tuy nhiên, anh đã lọt vào mắt xanh của một người quan trọng tình cờ đến thăm từ Tokyo. Mọi chuyện sẽ diễn ra như thế nào đối với Ashito?",
+            "image": "",
+            "episode": "28"
         }
-    },
-    {
-        "id": 2,
-        "title": "Mens Casual Premium Slim Fit T-Shirts ",
-        "price": 22.3,
-        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-        "rating": {
-            "rate": 4.1,
-            "count": 259
-        }
-    },
-    {
-        "id": 3,
-        "title": "Mens Cotton Jacket",
-        "price": 55.99,
-        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-        "rating": {
-            "rate": 4.7,
-            "count": 500
-        }
-    },
-    {
-        "id": 4,
-        "title": "Mens Casual Slim Fit",
-        "price": 15.99,
-        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-        "rating": {
-            "rate": 2.1,
-            "count": 430
-        }
-    },
-    {
-        "id": 5,
-        "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-        "price": 695,
-        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 4.6,
-            "count": 400
-        }
-    },
-    {
-        "id": 6,
-        "title": "Solid Gold Petite Micropave ",
-        "price": 168,
-        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 3.9,
-            "count": 70
-        }
-    },
-    {
-        "id": 7,
-        "title": "White Gold Plated Princess",
-        "price": 9.99,
-        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 3,
-            "count": 400
-        }
-    },
-    {
-        "id": 8,
-        "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-        "price": 10.99,
-        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-        "category": "jewelery",
-        "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-        "rating": {
-            "rate": 1.9,
-            "count": 100
-        }
-    },
-    {
-        "id": 9,
-        "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-        "price": 64,
-        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-        "rating": {
-            "rate": 3.3,
-            "count": 203
-        }
-    },
-    {
-        "id": 10,
-        "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-        "price": 109,
-        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-        "rating": {
-            "rate": 2.9,
-            "count": 470
-        }
-    },
-    {
-        "id": 11,
-        "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-        "price": 109,
-        "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-        "rating": {
-            "rate": 4.8,
-            "count": 319
-        }
-    },
-    {
-        "id": 12,
-        "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-        "price": 114,
-        "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-        "rating": {
-            "rate": 4.8,
-            "count": 400
-        }
-    },
-    {
-        "id": 13,
-        "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-        "price": 599,
-        "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-        "rating": {
-            "rate": 2.9,
-            "count": 250
-        }
-    },
-    {
-        "id": 14,
-        "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-        "price": 999.99,
-        "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-        "category": "electronics",
-        "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-        "rating": {
-            "rate": 2.2,
-            "count": 140
-        }
-    },
-    {
-        "id": 15,
-        "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-        "price": 56.99,
-        "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-        "rating": {
-            "rate": 2.6,
-            "count": 235
-        }
-    },
-    {
-        "id": 16,
-        "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-        "price": 29.95,
-        "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-        "rating": {
-            "rate": 2.9,
-            "count": 340
-        }
-    },
-    {
-        "id": 17,
-        "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-        "price": 39.99,
-        "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
-        "rating": {
-            "rate": 3.8,
-            "count": 679
-        }
-    },
-    {
-        "id": 18,
-        "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-        "price": 9.85,
-        "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-        "rating": {
-            "rate": 4.7,
-            "count": 130
-        }
-    },
-    {
-        "id": 19,
-        "title": "Opna Women's Short Sleeve Moisture",
-        "price": 7.95,
-        "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-        "rating": {
-            "rate": 4.5,
-            "count": 146
-        }
-    },
-    {
-        "id": 20,
-        "title": "DANVOUY Womens T Shirt Casual Cotton Short",
-        "price": 12.99,
-        "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-        "category": "women's clothing",
-        "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-        "rating": {
-            "rate": 3.6,
-            "count": 145
-        }
-    }
-]
+    ]
+}
+

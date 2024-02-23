@@ -3,152 +3,51 @@
   margin: 0;
   box-sizing: border-box;
 }
-.chat-container {
-  display: flex;
-  height: 100vh;
+#form {
+  width: 300px; /* Độ rộng của form */
+  margin: 50px auto; /* Căn giữa form */
+  padding: 30px; /* Khoảng cách từ viền nội dung đến viền ngoài form */
+  border: 1px solid #ccc; /* Viền của form */
+  border-radius: 5px; /* Bo tròn góc của form */
+  background: pink;
+ 
+  
 }
 
-.friend-list {
-  width: 200px;
-  background-color: #f0f0f0;
-  padding: 20px;
+h1 {
+  font-size: 24px; /* Kích thước chữ của tiêu đề */
+  margin-bottom: 20px; /* Khoảng cách từ tiêu đề đến các trường input */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.friend {
-  cursor: pointer;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-.avatar {
-  width: 40px; 
-  height: 40px; 
-  border-radius: 50%;
-  object-fit: cover; 
-  margin-right: 5px;
+label {
+  display: block; /* Hiển thị label dưới dạng block để nằm trên mỗi input */
+  margin-bottom: 15px; /* Khoảng cách giữa các label */
 }
 
-
-.friend:hover {
-  background-color: #ddd;
-}
-
-.friend.active {
-  background-color: #007bff;
-  color: white;
-}
-
-.chat-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.chat-list {
-  overflow-y: auto;
-  flex: 1;
-}
-
-.message {
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.input-container {
-  display: flex;
-}
-
-input[type="text"] {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%; /* 100% chiều rộng của input */
+  padding: 10px; /* Khoảng cách từ nội dung trong input đến viền của input */
+  margin-bottom: 10px; /* Khoảng cách giữa các input */
+  border: 1px solid #ccc; /* Viền của input */
+  border-radius: 5px; /* Bo tròn góc của input */
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
+  width: 100%; /* 100% chiều rộng của button */
+  padding: 10px; /* Khoảng cách từ nội dung trong button đến viền của button */
+  background-color: #007bff; /* Màu nền của button */
+  color: #fff; /* Màu chữ của button */
+  border: none; /* Không có viền cho button */
+  border-radius: 5px; /* Bo tròn góc của button */
+  cursor: pointer; /* Con trỏ chuột thành dạng bỏn */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
 }
 
 button:hover {
-  background-color: #0056b3;
-} */
-
-
-.chat-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: #0056b3; /* Màu nền của button khi di chuột vào */
 }
-
-.friend-list {
-  width: 200px;
-}
-
-.friend-list input[type="text"] {
-  width: calc(100% - 20px);
-  margin-bottom: 10px;
-  padding: 5px;
-}
-
-.filter-buttons {
-  display: flex;
-}
-
-.filter-buttons button {
-  background-color: #ccc;
-  border: none;
-  padding: 5px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-.filter-buttons button.active {
-  background-color: #999;
-  color: #fff;
-}
-
-.friend {
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.friend.active {
-  background-color: #f0f0f0;
-}
-
-.chat-box {
-  flex-grow: 1;
-  margin-left: 20px;
-}
-
-.chat-list {
-  height: 400px;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-
-.message {
-  background-color: #f0f0f0;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-
-.input-container {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
