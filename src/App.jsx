@@ -1,63 +1,46 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './App.css';
-import { json } from 'react-router-dom';
+
+const instanceAxios = axios.create({
+  baseURL: "https://fakestoreapi.com/products"
+});
 
 const App = () => {
-  const [user, setUser] = useState({
-    username: "",
-    password: "",
-    email: "",
-    
-  });
-  const [confirmPassword, setConfirmPassword] = useState("")
-  const onChangeConfirmPassword = (e)=>{
-    setConfirmPassword(e.target.value)
-  }
-  function onChangeValue(key) {
-    return function (e) {
-      setUser({ ...user, [key]: e.target.value });
-    };
-  }
-  function isValidEmail(email) {
-    // Biểu thức chính quy để kiểm tra định dạng email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+  const [products, setProducts] = useState([]);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
-  
-
-  function onSubmit(event) {
-    event.preventDefault();
-    if (user.password !== confirmPassword){
-      alert("Please! Password and ConfirmPassword must be the same!!1")
-      return
+  const fetchProduct = async () => {
+    try {
+      const { data } = await instanceAxios.get();
+      console.log(data);
+      setProducts(data);
+    } catch (error) {
+      console.error('Error fetching products:', error);
     }
-    alert(JSON.stringify(user))
-    setUser({
-      username: "",
-      password: "",
-      confirmPassword:"",
-      email: "",
-    });
-  }
+  };
+
+  const handleImageClick = (productId) => {
+    setSelectedProductId(productId);
+  };
 
   return (
-    <form id="form" onSubmit={onSubmit}>
-      <h1>Login</h1>
-      <label htmlFor="username">Username</label>
-      <input type="text" id="username" value={user.username} onChange={onChangeValue("username")} />
-
-      <label htmlFor="password">Password</label>
-      <input type="password" id="password" value={user.password} onChange={onChangeValue("password")} />
-
-      <label htmlFor="confirmPassword">Confirm Password</label>
-      <input type="password" id="confirmpassword" value={user.confirmPassword} onChange={onChangeConfirmPassword}  />
-
-      <label htmlFor="email">Email</label>
-      <input type="email" id="email" value={user.email} onChange={onChangeValue("email")} />
-
-      <button type='submit'>Login</button>
-    </form>
+    <div>
+      <div className='btn'>
+        <button onClick={fetchProduct} type='primary'>Fetch product</button>
+      </div>
+      {products.map(product => (
+        <div key={product.id} className='product'>
+          <img src={product.image} alt={product.title} onClick={() => handleImageClick(product.id)} />
+          <div className='product-info'>
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <p>Price: ${product.price}</p>
+          </div>
+        </div>
+      ))}
+      {selectedProductId && <p>Selected Product ID: {selectedProductId}</p>}
+    </div>
   );
 };
 

@@ -3,51 +3,26 @@
   margin: 0;
   box-sizing: border-box;
 }
-#form {
-  width: 300px; /* Độ rộng của form */
-  margin: 50px auto; /* Căn giữa form */
-  padding: 30px; /* Khoảng cách từ viền nội dung đến viền ngoài form */
-  border: 1px solid #ccc; /* Viền của form */
-  border-radius: 5px; /* Bo tròn góc của form */
-  background: pink;
- 
-  
-}
-
-h1 {
-  font-size: 24px; /* Kích thước chữ của tiêu đề */
-  margin-bottom: 20px; /* Khoảng cách từ tiêu đề đến các trường input */
-  justify-content: center;
+.product{
+  display: flex;
+  margin: 20px;
   align-items: center;
-  text-align: center;
+  padding: 20px;
 }
-
-label {
-  display: block; /* Hiển thị label dưới dạng block để nằm trên mỗi input */
-  margin-bottom: 15px; /* Khoảng cách giữa các label */
+.product img{
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-  width: 100%; /* 100% chiều rộng của input */
-  padding: 10px; /* Khoảng cách từ nội dung trong input đến viền của input */
-  margin-bottom: 10px; /* Khoảng cách giữa các input */
-  border: 1px solid #ccc; /* Viền của input */
-  border-radius: 5px; /* Bo tròn góc của input */
+.product-info{
+  flex: 1;
 }
-
-button {
-  width: 100%; /* 100% chiều rộng của button */
-  padding: 10px; /* Khoảng cách từ nội dung trong button đến viền của button */
-  background-color: #007bff; /* Màu nền của button */
-  color: #fff; /* Màu chữ của button */
-  border: none; /* Không có viền cho button */
-  border-radius: 5px; /* Bo tròn góc của button */
-  cursor: pointer; /* Con trỏ chuột thành dạng bỏn */
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
-}
-
-button:hover {
-  background-color: #0056b3; /* Màu nền của button khi di chuột vào */
+.btn{
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 10px;
 }
