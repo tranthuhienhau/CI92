@@ -1,149 +1,92 @@
-/* App.css */
 
-/* CSS cho Navbar */
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-  text-decoration: none;
+.tabs {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+ 
 }
 
-.navbar a {
-  float: left;
-  display: block;
-  color: #fff;
+h1 {
+  font-size: 40px;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
-.navbar a:hover {
-  background-color: #ddd;
-  color: #000;
-}
-
-.navbar a.active {
-  background-color: #555;
-}
-
-/* CSS cho Introduce */
-.introduce {
-  text-align: center;
-  padding: 20px;
-}
-
-/* CSS cho Content */
-.content {
-  padding: 20px;
-}
-
-/* CSS cho ProductDetail */
-.product-detail {
-  padding: 20px;
-}
-
-/* CSS cho Search */
-.search {
-  padding: 20px;
-}
-
-/* CSS cho FAQ */
-.faq {
-  padding: 20px;
-}
-
-/* CSS cho Phimbo */
-.phimbo {
-  padding: 20px;
-}
-
-/* CSS cho Phimmoi */
-.phimmoi {
-  padding: 20px;
-}
-
-/* CSS cho PhimHot */
-.phimhot {
-  padding: 20px;
-}
-
-/* Navbar container */
-.navbar {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
+.tab-link-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  background-color: #222;
-  transition: background-color 0.3s ease;
 }
 
-/* Logo */
-.logo-container {
-  width: 100px;
-}
-
-.logo-container img {
-  width: 100%;
-  height: auto;
-}
-
-/* Menu */
-.menu-container ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-container ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.menu-container ul li a {
-  text-decoration: none;
-  color: #fff;
+.tab-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px 20px;
   font-size: 16px;
-  transition: color 0.3s ease;
 }
 
-.menu-container ul li a:hover {
-  color: #ccc;
+.tab-link.active {
+  color: blue;
 }
 
-/* Search Container */
-.search-container {
+.underline {
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.input {
+  margin-top: 20px;
   display: flex;
   align-items: center;
+  justify-content: center; 
 }
 
-.search-container svg {
-  font-size: 20px;
-  color: #fff;
-}
-
-.search-container input[type="text"] {
-  font-size: 14px;
-  border: none;
-  color: #fff;
-  outline: none;
-  width: 0;
-  padding: 10px;
-  background: #333;
-  border: 1px solid #fff;
-  transition: width 0.5s;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.search-container input[type="text"]:focus {
-  padding-left: 26px;
-  width: 300px;
-  cursor: text;
-  opacity: 1;
+.input input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  margin-right: 10px;
+  width: 500px;
+}
+
+.input button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ ul li {
+  list-style: none;
+ }
+ .tabs li{
+  align-items: center;
+
+
+ }
+ .delete-icon {
+  cursor: pointer;
+  color: red;
+  margin-left: 400px; 
+}
+
+.delete-icon:hover {
+  opacity: 0.7;
+}
+
+.btn_delete{
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: red;
+  border: none;
+  
 }
