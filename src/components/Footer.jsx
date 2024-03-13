@@ -1,37 +1,84 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import styled from 'styled-components';
+
+const StyledFooter = styled.footer`
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const LogoContainer = styled.div`
+  margin-bottom: 20px;
+`;
+
+const LogoImage = styled.img`
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+`;
+
+const LogoLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+`;
+
+const FooterText = styled.p`
+  font-size: 16px;
+  margin-bottom: 20px;
+`;
+
+const FooterList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+`;
+
+const FooterListItem = styled.li`
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+`;
+
+const BulletPoint = styled.span`
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+`;
+
+const FooterTextItem = styled.span`
+  color: #fff;
+`;
+
 const Footer = () => {
   return (
-    <div className="footer" style={{backgroundImage: `https://raw.githubusercontent.com/trananhtuat/react-movie/main/src/assets/footer-bg.jpg`}}>
-    <div className="footer__content container">
-        <div className="footer__content__logo">
-            <div className="logo">
-                <img src="https://github.com/trananhtuat/react-movie/blob/main/src/assets/tmovie.png?raw=true" alt="" />
-                <Link to="/">tMovies</Link>
-            </div>
-        </div>
-        <div className="footer__content__menus">
-            <div className="footer__content__menu">
-                <Link to="/">Home</Link>
-                <Link to="/">Contact us</Link>
-                <Link to="/">Term of services</Link>
-                <Link to="/">About us</Link>
-            </div>
-            <div className="footer__content__menu">
-                <Link to="/">Live</Link>
-                <Link to="/">FAQ</Link>
-                <Link to="/">Premium</Link>
-                <Link to="/">Pravacy policy</Link>
-            </div>
-            <div className="footer__content__menu">
-                <Link to="/">You must watch</Link>
-                <Link to="/">Recent release</Link>
-                <Link to="/">Top IMDB</Link>
-            </div>
-        </div>
-    </div>
-</div>
-  )
+    <StyledFooter>
+      <FooterContent className="container">
+        <LogoContainer>
+          <div className="logo">
+            <LogoImage src="https://github.com/trananhtuat/react-movie/blob/main/src/assets/tmovie.png?raw=true" alt="image footer" />
+            <LogoLink href="/">tMovies</LogoLink>
+          </div>
+        </LogoContainer>
+        <FooterText>Phim chất lượng cao online của XemPhim khác biệt so với các trang phim khác ở những điểm sau:</FooterText>
+        <FooterList>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Là phim bluray (reencoded) với độ phân giải thấp nhất là Full HD (1080p), trong khi hầu hết các trang phim khác chỉ có tới độ phân giải HD (720p) là cao nhất.</FooterTextItem></FooterListItem>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Chất lượng cao với lượng dữ liệu trên giây (bitrate) gấp từ 5 - 10 lần so với phim online thông thường. Đây là yếu tố quyết định độ nét của phim, thậm chí còn quan trọng hơn độ phân giải.</FooterTextItem></FooterListItem>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Âm thanh 5.1 (6 channel) thay vì stereo (2 channel) như các trang phim khác, kể cả Youtube.</FooterTextItem></FooterListItem>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Phù hợp để xem trên màn hình TV, máy tính, laptop có độ phân giải cao.</FooterTextItem></FooterListItem>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Nếu không hài lòng với phụ đề có sẵn, bạn có thể tự upload phụ đề của riêng mình để xem online.</FooterTextItem></FooterListItem>
+          <FooterListItem><BulletPoint>&#8226;</BulletPoint><FooterTextItem>Có lựa chọn hiện phụ đề song ngữ (tiếng Anh & tiếng Việt), phù hợp với những người muốn học tiếng Anh qua phụ đề phim.</FooterTextItem></FooterListItem>
+        </FooterList>
+      </FooterContent>
+    </StyledFooter>
+  );
 }
 
-export default Footer
+export default Footer;

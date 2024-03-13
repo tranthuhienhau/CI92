@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import NetFlixLogo from '../../assets/images/NetFlix.png';
 import { IoIosSearch } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
-
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [showSearch, setShowSearch] = useState(false); // State để xác định việc hiển thị phần tìm kiếm
@@ -38,11 +37,24 @@ const Navbar = () => {
         </LogoContainer>
         <MenuContainer>
           <ul>
-                        <NavLink to={"/search"} className={"opp-nav"}>Tìm Kiếm</NavLink>
-                        <NavLink to={"/hotmovies"} className={"opp-nav"}>Phim Hot</NavLink>
-                        <NavLink to={"/phimbo"} className={"opp-nav"}>Phim Bộ</NavLink>
-                        <NavLink to={"/phimmoi"} className={"opp-nav"}>Phim Mới</NavLink>
-                        <NavLink to={"/faq"} className={"opp-nav"}>FAQ</NavLink>
+            <li>
+              <StyledNavLink to={"/"}>Trang chủ</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to={"/search"}>Tìm Kiếm</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to={"/hotmovies"}>Phim Hot</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to={"/phimbo"}>Phim Bộ</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to={"/phimmoi"}>Phim Mới</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to={"/faq"}>FAQ</StyledNavLink>
+            </li>
           </ul>
         </MenuContainer>
         <SearchContainer>
@@ -70,7 +82,6 @@ const StyledNavbar = styled.nav`
 const NavbarContent = styled.div`
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,22 +102,23 @@ const MenuContainer = styled.div`
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Đưa menu sang phải */
 
     li {
-      display: inline-block;
-      margin-right: 20px;
-
-      oop-nav a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 16px;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #ccc;
-        }
-      }
+      margin-left: 20px;
     }
+  }
+`;
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ccc;
   }
 `;
 
@@ -141,5 +153,6 @@ const SearchContainer = styled.div`
     }
   }
 `;
+
 
 export default Navbar;
