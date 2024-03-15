@@ -69,7 +69,7 @@ const Navbar = () => {
 };
 
 const StyledNavbar = styled.nav`
-  width: 100%;
+  width: 99.5%;
   height: 80px;
   position: fixed;
   top: 0;
@@ -85,11 +85,11 @@ const NavbarContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 15px;
 `;
 
 const LogoContainer = styled.div`
-  width: 100px;
+  width: 120px;
 
   img {
     width: 100%;

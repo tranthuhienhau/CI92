@@ -31,8 +31,21 @@ const ProductDetail = () => {
               <button onClick={() => handleClick(product.id)} className='btn-play'>Xem phim</button>
             </div>
             {/* Render thông tin sản phẩm */}
-            <p>{product.movieName}</p>
-            <p>{product.description}</p>
+            <div className='text_description'>
+            <p className='movieName'>{product.movieName}</p>
+            <p>{product.time}</p>
+            <div className='tooltip'>
+            <button className='btn-facebook'>Facebook</button>
+            <button className='btn-bst'>+ Bộ sưu tập
+           
+            </button>
+            </div>
+            <p>TÁC GIẢ: {product.director} </p>
+            <p>QUỐC GIA: {product.nation} </p>
+            <p>KHỞI CHIẾU: {product.releaseDate} </p>
+            <p className='description_p'>{product.description}</p>
+            </div>
+            
             {/* Và các thông tin khác... */}
           </div>
           {/* Render các sản phẩm tương tự hoặc bình luận ở đây */}

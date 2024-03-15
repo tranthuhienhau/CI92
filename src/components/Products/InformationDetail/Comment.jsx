@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaRegComments } from "react-icons/fa";
 
 const Comment = ({ item }) => {
-    const [comments, setComments] = useState(item[0].comment);
+    const [comments, setComments] = useState([]);
     const [comment, setComment] = useState("");
 
+    // Load danh sách comment từ Local Storage khi component được tạo ra
     useEffect(() => {
-        setComments(item[0].comment);
-        console.log("Comment")
-    }, [item]);
+        const savedComments = JSON.parse(localStorage.getItem("comments"));
+        if (savedComments) {
+            setComments(savedComments);
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Kiểm tra xem ô input có rỗng hoặc chỉ chứa khoảng trắng không
         if (!comment.trim()) {
             alert("Bình luận không được để trống!");
-            return; // Ngừng thực thi hàm nếu ô input rỗng hoặc chỉ chứa khoảng trắng
+            return;
         }
 
-        const movieId = item[0].id;
-        const nameComment = JSON.parse(sessionStorage.getItem("login"))[0].name;
+        const nameComment = JSON.parse(sessionStorage.getItem("login"))?.[0]?.name;
         const newComment = {
             id: Date.now(),
             name: nameComment,
@@ -27,20 +28,27 @@ const Comment = ({ item }) => {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/data/${movieId}`, {
+            // Cập nhật danh sách comment và lưu vào Local Storage
+            const updatedComments = [...comments, newComment];
+            setComments(updatedComments);
+            localStorage.setItem("comments", JSON.stringify(updatedComments));
+
+            // Reset input field
+            setComment("");
+
+            // Gửi request PATCH để cập nhật dữ liệu trên server
+            const response = await fetch(`http://localhost:3000/data/${item?.[0]?.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    comment: [...comments, newComment]
+                    comment: updatedComments
                 }),
             });
 
             if (response.ok) {
                 console.log("Bình luận đã được thêm");
-                setComments([...comments, newComment]);
-                setComment(""); // Reset input field sau khi gửi thành công
             } else {
                 console.error("Lỗi khi thêm bình luận");
             }

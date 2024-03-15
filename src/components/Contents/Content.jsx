@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link, useNavigate } from 'react-router-dom'; // Import thêm useNavigate từ react-router-dom
 import data from '../../data.json'; // Import dữ liệu từ file data.json
+import Information from '../Products/InformationDetail/Information';
+import Comment from '../Products/InformationDetail/Comment';
+import SimilarMovie from '../Products/InformationDetail/SimilarMovie';
 import ProductDetail from '../Products/ProductDetail';
 import WatchMovie from '../Products/WatchMovie';
-import Product from '../Products/Product';
 const Container = styled.div`
     width: 1000px;
     margin: 0 auto;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import data from '../../data.json';
 
 const Container = styled.div`
     max-width: 800px;
@@ -80,12 +79,17 @@ const PhimHot = () => {
 
     const fetchProducts = (filter) => {
         setLoading(true);
-        // Simulate fetching data from data.json
-        setTimeout(() => {
-            const filteredProducts = data.data.filter(product => product.releaseDate === filter);
-            setProducts(filteredProducts);
-            setLoading(false);
-        }, 1000); // Simulate delay for loading
+        fetch(`https://fakestoreapi.com/products?limit=10`)
+            .then(response => response.json())
+            .then(data => {
+                const filteredProducts = data.filter(product => product.releaseDate === filter);
+                setProducts(filteredProducts);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            });
     };
 
     const handleFilterClick = (filter) => {
@@ -121,8 +125,8 @@ const PhimHot = () => {
                 <ProductContainer>
                     {products.map((product) => (
                         <div key={product.id}>
-                            <img src={product.image} alt={product.movieName} />
-                            <p>{product.movieName}</p>
+                            <img src={product.image} alt={product.title} />
+                            <p>{product.title}</p>
                             <p>{product.releaseDate}</p>
                         </div>
                     ))}

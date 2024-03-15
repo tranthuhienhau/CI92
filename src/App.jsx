@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Introduce from './components/intro/Introduce';
 import Content from './components/Contents/Content';
@@ -14,6 +14,7 @@ import data from './data.json';
 import axios from 'axios';
 import ProductDetail from './components/Products/ProductDetail';
 import WatchMovie from './components/Products/WatchMovie';
+
 const HomePage = () => {
   return (
     <div>
@@ -36,8 +37,8 @@ const App = () => {
           <Route path="/phimbo" element={<Phimbo />} />
           <Route path="/phimmoi" element={<Phimmoi />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path='/:id' element={<ProductDetail />}/>
-        <Route path='/:id/:movieName' element={<WatchMovie />}/>
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path='/:id' element={<WatchMovie />} />
         </Routes>
         <Footer />
       </div>

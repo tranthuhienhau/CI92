@@ -66,3 +66,307 @@
   width: 100%;
   padding: 0%;
 }
+
+.background-img-detail{
+  width: 100%;
+  object-fit: cover;
+  height: 39.4vw;
+}
+.background-video-detail{
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+  display: flex;
+  justify-content: center;
+}
+.blurred-background{
+  width: 99%;
+  height: 40vw;
+  background-color: rgba(0, 0, 0, 0.69);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+.bacground-detail{
+  background-color: #06121E;
+}
+.product-detail-all{
+  margin-top: -25vw;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 70px;
+  gap: 30px;
+  color: white;
+  
+}
+.product-watch-all{
+  color: white;
+  padding-top: 80px;
+}
+.btn-img-product-detail{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.btn-play{
+  background-color: #DD003F;
+  border: 1px solid #DD003F;
+  font-weight: 600;
+  height: 45px;
+  font-size: 20px;
+}
+.img-product-detail{
+  max-width: 300px;
+  width: 20vw;
+  border-radius: 10px;
+}
+.description{
+  color: #A5B2B5;
+}
+.information-detail{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+.name-movie-detail{
+  font-size: 40px;
+}
+.releaseDate{
+  color: #A5B2B5;
+  padding: 4px;
+}
+.description_p{
+  text-align: justify;
+}
+.movieName{
+  font-size: 50px;
+  color: #fff;
+}
+.text_description{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.tooltip{
+  display: flex;
+  padding: 20px;
+}
+.btn-facebook{
+  width: 130px;
+  height: 50px;
+  border-radius: 7px;
+  margin-right: 20px;
+  color: #fff;
+  background-color: #3E56C4;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 200;
+}
+.btn-bst{
+  width: 130px;
+  height: 50px;
+  border-radius: 7px;
+  border: 1px #3E8ED0;
+  background-color: #1E1B1D;
+  color: #3E56C4;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+.btn-bst:hover{
+  background-color: #3E56C4;
+  color: #fff;
+}
+.btn-bst:hover .tooltip{
+  visibility: visible;
+  background-color: #fff;
+  width: 100px;
+  height: 50px;
+  color: #0a0a0a;
+  padding: auto;
+  position: absolute;
+  transform: translateX(90%);
+  
+}
+.btn-bst .tooltip{
+  visibility: hidden;
+}
+
+
+.title-comment-all{
+  color: #7A7A7A;
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-top: 20px;
+  border-top: 1px solid #7A7A7A;
+}
+.content-comment-all{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 20px;
+}
+.content-comment{
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px ;
+}
+.input-btn-comment{
+  width: calc(100% - 8px );
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #7A7A7A;
+  border-radius:0px 0px 10px 10px;
+}
+.comment-all{
+  padding-bottom: 2vw;
+}
+.input-comment{
+  flex: 7;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid white;
+  font-size: 16px;
+}
+.btn-comment{
+  flex: 1;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  border: 1px solid white;
+}
+.input-comment:focus{
+  outline: none;
+}
+.name-content-comment{
+  padding: 10px;
+  border-bottom: 1px solid #7A7A7A;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.name-comment{
+  font-weight: bold;
+  color: #363636;
+  font-size: 20px;
+}
+
+
+
+.information-detail{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+.name-movie-detail{
+  font-size: 40px;
+}
+.releaseDate{
+  color: #A5B2B5;
+  padding: 4px;
+}
+.time-movie{
+  padding: 10px;
+}
+.description{
+  text-align: justify;
+}
+
+
+
+.title-similar-movies{
+  color: white;
+  font-size: 25px;
+  margin-left: 5vw;
+}
+.similar-movies{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.similar-movie-all{
+  display: flex;
+  margin-left: 5vw;
+  padding-right: 3vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+  overflow-x: scroll;
+}
+.img-similar-movies{
+  width: 10vw;
+  height: 16vw;
+  border-radius: 10px;
+}
+.similar-movies{
+  cursor: pointer;
+  transition: transform 0.3s linear;
+  width: 11vw;
+}
+.similar-movies:hover{
+  transform: scale(1.05); 
+}
+
+
+
+.background-video-detail {
+  width: 100%; /* Chiều rộng video chiếm toàn bộ phần tử chứa nó */
+  height: auto; /* Chiều cao tự động dựa trên tỉ lệ khung hình của video */
+  border-radius: 8px; /* Bo tròn các góc của video */
+  outline: none; /* Loại bỏ đường viền khi video được focus */
+}
+
+.background-video-detail:hover {
+  cursor: pointer; /* Biến con trỏ chuột thành icon chỉ cho thấy người dùng có thể click vào video */
+}
+
+/* Nếu bạn muốn thêm hiệu ứng hover nào đó, bạn có thể thêm CSS tương ứng */
+.background-video-detail:hover {
+  opacity: 0.8; /* Giảm độ mờ của video khi hover vào */
+}
+.product-watch-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+::-webkit-scrollbar {
+  width: 8px; /* Đối với thanh cuộn dọc */
+  height: 4px; /* Đối với thanh cuộn ngang */
+}
+
+/* Tùy chỉnh màu nền của track (phần cuộn) */
+::-webkit-scrollbar-track {
+  background-color: #06121E; /* Màu nền của track */
+}
+
+/* Tùy chỉnh màu của thumb (phần bạn kéo) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Màu của thumb */
+}
+
+/* Thay đổi màu của thumb khi hover hoặc kéo */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu khi hover */
+}
