@@ -42,7 +42,7 @@ const ProductDetail = () => {
             <p className='movieName'>{product.movieName}</p>
             <p>{product.time}</p>
             <div className='tooltip'>
-            <button className='btn-facebook'>Facebook</button>
+            <button className='btn-facebook' onClick={() => {window.location.href="https://www.facebook.com/"}}>Facebook</button>
             <button className='btn-bst'>+ Bộ sưu tập
            
             </button>

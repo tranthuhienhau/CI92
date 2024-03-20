@@ -755,3 +755,82 @@ select, input[type="text"] {
   color: #0B1E30; /* Màu chữ khi active */
   background-color: white;
 }
+
+
+
+/* CSS login */
+.login{  
+  width: 100%;
+  height: 100%;
+}
+.login-all-backgroud{
+  width: 100%;
+  height: 97.8vh;
+  overflow: hidden;
+}
+.login-app *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.label-input input[type="text"] {
+width: 100%;
+padding: 8px;
+border-radius: 0px;
+margin-bottom: 0px;
+margin-top: 0;
+border-top: #06121E;
+border-left: #06121E;
+border-right: #06121E;
+}
+
+.login{  
+  width: 100%;
+  height: 100%;
+}
+.login-all-backgroud{
+  width: 100%;
+  height: 97.8vh;
+  overflow: hidden;
+}
+.login-app *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.label-input input[type="text"] {
+width: 100%;
+padding: 8px;
+border-radius: 0px;
+margin-bottom: 0px;
+margin-top: 0;
+border-top: #06121E;
+border-left: #06121E;
+border-right: #06121E;
+}
+
+
+.label-input input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  margin-top: 0;
+  border-top: #06121E;
+  border-left: #06121E;
+  border-right: #06121E;
+}
+.title-web-link {
+  text-decoration: none;
+}
+
+.opp-nav {
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 7px;
+}
+
+
+

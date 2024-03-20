@@ -6,17 +6,21 @@ const Comment = ({ item }) => {
     const [comment, setComment] = useState("");
     const [currentUser, setCurrentUser] = useState("");
 
-    // Load danh sách comment từ Local Storage khi component được tạo ra
     useEffect(() => {
-        const savedComments = JSON.parse(localStorage.getItem("comments"));
+        // Load danh sách comment từ Local Storage khi component được tạo ra
+        const savedComments = JSON.parse(localStorage.getItem("comments")) || [];
         if (savedComments) {
-            setComments(savedComments);
+            // Lọc danh sách comment theo id phim
+            const filteredComments = savedComments.filter(comment => comment.movieId === item?.[0]?.id);
+            setComments(filteredComments);
         }
+
+        // Load user hiện tại từ Session Storage khi component được tạo ra
         const loggedInUser = JSON.parse(sessionStorage.getItem("login"))?.[0];
         if (loggedInUser) {
             setCurrentUser(loggedInUser.name);
         }
-    }, []);
+    }, [item]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,6 +34,7 @@ const Comment = ({ item }) => {
             id: Date.now(),
             name: nameComment,
             content: comment,
+            movieId: item?.[0]?.id // Lưu id của phim vào comment
         };
 
         try {
@@ -55,7 +60,7 @@ const Comment = ({ item }) => {
             if (response.ok) {
                 console.log("Bình luận đã được thêm");
             } else {
-                console.error("Lỗi khi thêm bình luận");
+                console.error("Lỗi khi thêm bình luận:", response.statusText);
             }
         } catch (error) {
             console.error("Có lỗi xảy ra:", error);

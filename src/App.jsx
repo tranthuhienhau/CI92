@@ -7,9 +7,9 @@ import Navbar from './components/Navbar/Navbar';
 import Introduce from './components/intro/Introduce';
 import Content from './components/Contents/Content';
 import Search from './components/pages/Search';
-import FAQ from './components/FAQ';
-import Phimbo from './components/Phimbo';
-import Phimle from './components/Phimle'
+import FAQ from './components/pages/FAQ';
+import Phimbo from './components/pages/Phimbo';
+import Phimle from './components/pages/Phimle'
 import PhimHot from './components/pages/PhimHot';
 import Footer from './components/Footer';
 import './App.css';
@@ -38,6 +38,11 @@ const App = () => {
     return !HideNavbarPaths.includes(location.pathname) && <Navbar />;
   };
 
+  const FooterWithRouteCheck = () =>{
+    let location = useLocation ();
+    return !HideNavbarPaths.includes(location.pathname) && <Footer />;
+  }
+
   return (
     <Router>
       <div className='container'>
@@ -55,7 +60,7 @@ const App = () => {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/:id" element={<WatchMovie />} />
         </Routes>
-        <Footer />
+        <FooterWithRouteCheck />
       </div>
     </Router>
   );

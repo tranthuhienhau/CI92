@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import data from '../data.json';
+import data from '../../data.json';
 import { useNavigate } from 'react-router-dom';
 
-const Phimle = ({ defaultMovieType }) => {
+const Phimbo = ({ defaultMovieType }) => {
   const [filter, setFilter] = useState({
-    movieType: defaultMovieType || '1', // Thiết lập giá trị mặc định cho movieType
+    movieType: defaultMovieType !== undefined ? defaultMovieType : '0', // Thiết lập giá trị mặc định cho movieType nếu defaultMovieType được truyền vào
     category: '',
     nation: '',
     releaseYear: ''
@@ -80,4 +80,4 @@ const Phimle = ({ defaultMovieType }) => {
   );
 };
 
-export default Phimle;
+export default Phimbo;
