@@ -4,12 +4,17 @@ import { FaRegComments } from "react-icons/fa";
 const Comment = ({ item }) => {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState("");
+    const [currentUser, setCurrentUser] = useState("");
 
     // Load danh sách comment từ Local Storage khi component được tạo ra
     useEffect(() => {
         const savedComments = JSON.parse(localStorage.getItem("comments"));
         if (savedComments) {
             setComments(savedComments);
+        }
+        const loggedInUser = JSON.parse(sessionStorage.getItem("login"))?.[0];
+        if (loggedInUser) {
+            setCurrentUser(loggedInUser.name);
         }
     }, []);
 
@@ -20,7 +25,7 @@ const Comment = ({ item }) => {
             return;
         }
 
-        const nameComment = JSON.parse(sessionStorage.getItem("login"))?.[0]?.name;
+        const nameComment = currentUser;
         const newComment = {
             id: Date.now(),
             name: nameComment,

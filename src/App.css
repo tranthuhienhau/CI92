@@ -32,6 +32,8 @@
   opacity: 1;
   border-radius: 4px;
 }
+
+/* CSS FAQ */
 .faq-title{
   text-align: center;
   font-size: 37px;
@@ -67,6 +69,8 @@
   padding: 0%;
 }
 
+
+/* CSS ProductDetail */
 .background-img-detail{
   width: 100%;
   object-fit: cover;
@@ -198,7 +202,7 @@
   visibility: hidden;
 }
 
-
+/* CSS COMMENT */
 .title-comment-all{
   color: #7A7A7A;
   display: flex;
@@ -293,7 +297,7 @@
 }
 
 
-
+/* CSS SIMILAR phim */
 .title-similar-movies{
   color: white;
   font-size: 25px;
@@ -369,4 +373,385 @@
 /* Thay đổi màu của thumb khi hover hoặc kéo */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Màu khi hover */
+}
+
+
+/* CSS NAVBAR */
+
+.navbar-all-login {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  z-index: 100;
+  background-color: #102C48; /* Đặt màu nền của navbar */
+}
+
+.navbar-login {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+.navbar-opp {
+  display: flex;
+  gap: 20px;
+}
+
+.title-web {
+  color: white;
+  padding: 2px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.opp-nav-all {
+  padding-left: 20px;
+  display: flex;
+  gap: 20px;
+  margin-right: 500px;
+}
+
+.opp-nav:hover, .active {
+  border-bottom: 2px solid white;
+}
+
+.active{
+  border-bottom: none;
+}
+
+.opp-nav {
+  text-decoration: none;
+  padding: 5px;
+  transition: all 0.1s linear;
+  color: #DBDBDB;
+}
+
+.name-people-all {
+  display: flex;
+  gap: 20px;
+}
+
+.name-people {
+  padding: 8px;
+  color: white;
+}
+
+.icon-user {
+  color: white;
+  padding: 8px;
+  display: none;
+}
+
+@media screen and (max-width: 515px) {
+  .name-people {
+    display: none;
+  }
+
+  .icon-user {
+    display: block;
+  }
+
+  .navbar-login {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+/* CSS LOGIN */
+.login{
+  background-color: rgba(0, 0, 0, 0.532);
+  width: 100vw;
+  height: 120vh;
+  
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s linear;
+}
+.login-all-backgroud{
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/2e07bc25-8b8f-4531-8e1f-7e5e33938793/0019a33b-65e2-4ebc-bfb3-2d0b23352b5c/VN-vi-20240219-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 120vh;
+}
+.login-app-title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+.login-app-all{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.login-app{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgba(0, 0, 0, 0.744);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+.login-app-button-all{
+  display: flex;
+  justify-content: space-around;
+}
+.login-app-button{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: red;
+  color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 0.5px solid white;
+  transition: all 0.2s linear;
+}
+.login-app-button:hover{
+  background-color: #FFFFFF;
+  color: #4095FD;
+}
+
+.login-app-input{
+  min-width: 210px;
+  width: 21vw;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.656);
+  border-radius: 0px;
+  height: 35px;
+  padding: 10px;
+  color: white;
+  transition: all 0.1s linear;
+}
+.login-app-input::placeholder{
+  color: #B8B8B8;
+}
+.login-app-input:focus{
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.label-input{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label{
+  font-weight: bold;
+}
+.login-app-res{
+  font-size: 12px;
+  min-width: 210px;
+  width: 21vw;
+}
+.error-login{
+  font-size: 12px;
+  min-width: 210px;
+  width: 21vw;
+  padding-bottom: 20px;
+  margin-top: -5px;
+}
+.login-app-register{
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+}
+.error-register{
+  color: red;
+  font-size: 12px;
+  height: 12px;
+  margin-bottom: -22px;
+}
+
+
+/* CSS phim bộ */
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.items_phimbo {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item_phimbo {
+  width: 20%; /* Hiển thị mỗi hàng có 5 ảnh */
+  padding: 10px;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của item */
+}
+
+.img_phimbo {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.title_phimbo {
+  margin: 0;
+  text-align: center;
+}
+.filter {
+  display: flex;
+ justify-content: space-between;
+  margin: auto; 
+}
+
+.filter-container label,
+.filter-container select,
+.filter-container input[type="text"] {
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}
+
+.filter-container label {
+  flex: 0 0 auto; 
+  width: auto;
+}
+
+.filter-container select,
+.filter-container input[type="text"] {
+  flex: 1; 
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.wrapper{
+  width: 1200px;
+  margin: 100px auto;
+}
+
+/* CSS PHIM HOT */
+.phim-hot {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+ 
+  margin-bottom: 20px;
+}
+
+.data ul {
+ 
+  padding: 0;
+  margin: 0;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.data ul li {
+ 
+  list-style-type: none; 
+  margin: 10px; 
+  width: calc(20% - 20px); 
+  text-align: center; 
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.data ul li img {
+  width: 100%;
+  height: 300px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.data ul li img:hover{
+  transform: scale(1.1);
+}
+
+/* CSS cho phần hiển thị ảnh và tên phim */
+.week-month-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.week-month-container ul li {
+ 
+  list-style-type: none; 
+  margin: 10px; 
+  
+  text-align: center; 
+}
+
+.week-month-container ul li img {
+  width: 100%;
+  height: 400px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.week-month-container ul li p{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.week-month-container ul li img:hover{
+  transform: scale(1.1);
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1000px;
+  height: 50px;
+  background-color: #0B1E30;
+}
+
+.buttons button {
+  width: 100px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight:500 ;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng transition cho màu nền và màu chữ */
+}
+
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hiệu ứng màu nền khi hover */
+}
+
+.buttons button.active {
+  color: #0B1E30; /* Màu chữ khi active */
+  background-color: white;
 }

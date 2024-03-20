@@ -1,139 +1,88 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div`
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 20px;
-`;
-
-const Title = styled.h1`
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-`;
-
-const FilterContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-`;
-
-const FilterButton = styled.button`
-    cursor: pointer;
-    padding: 8px;
-    margin-right: 10px;
-    font-size: 18px;
-    color: #fff;
-    background-color: ${props => props.active ? '#007bff' : '#0B1E30'};
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: #f0f0f0;
-    }
-`;
-
-const ProductContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-
-    div {
-        flex: 0 0 calc(33.33% - 20px);
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-
-        img {
-            width: 100%;
-            height: 250px;
-            border-radius: 5px;
-        }
-
-        p {
-            font-size: 16px;
-            margin-top: 10px;
-        }
-    }
-`;
-
-const Loading = styled.div`
-    font-size: 20px;
-    color: #333;
-`;
+import data from '../../data.json'; // Import data from JSON file
+import { useNavigate } from 'react-router-dom';
 
 const PhimHot = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [activeFilter, setActiveFilter] = useState('Ngày');
+  const [activeTab, setActiveTab] = useState(null);
+  const [randomWeekMovie, setRandomWeekMovie] = useState(null);
+  const [randomMonthMovie, setRandomMonthMovie] = useState(null);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        fetchProducts(activeFilter.toLowerCase());
-    }, [activeFilter]);
+  useEffect(() => {
+    // Khởi tạo phim ngẫu nhiên cho tuần và tháng khi component được render
+    setRandomWeekMovie(getRandomItem(data.data));
+    setRandomMonthMovie(getRandomItem(data.data));
+  }, []);
 
-    const fetchProducts = (filter) => {
-        setLoading(true);
-        fetch(`https://fakestoreapi.com/products?limit=10`)
-            .then(response => response.json())
-            .then(data => {
-                const filteredProducts = data.filter(product => product.releaseDate === filter);
-                setProducts(filteredProducts);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                setLoading(false);
-            });
-    };
+  // Hàm lấy một mục ngẫu nhiên từ mảng dữ liệu
+  const getRandomItem = (array) => {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  };
 
-    const handleFilterClick = (filter) => {
-        setActiveFilter(filter);
-    };
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
 
-    return (
-        <Container>
-            <Title>TOP PHIM ĐƯỢC XEM NHIỀU NHẤT</Title>
-            <FilterContainer>
-                <FilterButton 
-                    onClick={() => handleFilterClick('Ngày')} 
-                    active={activeFilter === 'Ngày'}
-                >
-                    Ngày
-                </FilterButton>
-                <FilterButton 
-                    onClick={() => handleFilterClick('Tuần')} 
-                    active={activeFilter === 'Tuần'}
-                >
-                    Tuần
-                </FilterButton>
-                <FilterButton 
-                    onClick={() => handleFilterClick('Tháng')} 
-                    active={activeFilter === 'Tháng'}
-                >
-                    Tháng
-                </FilterButton>
-            </FilterContainer>
-            {loading ? (
-                <Loading>Loading...</Loading>
-            ) : (
-                <ProductContainer>
-                    {products.map((product) => (
-                        <div key={product.id}>
-                            <img src={product.image} alt={product.title} />
-                            <p>{product.title}</p>
-                            <p>{product.releaseDate}</p>
-                        </div>
-                    ))}
-                </ProductContainer>
-            )}
-        </Container>
-    );
+  const handleImageClick = (movieId) => {
+    navigate(`/product/${movieId}`); // Điều hướng đến trang productDetail với ID của phim
+  };
+
+  return (
+    <div className="phim-hot" style={{ marginTop: '100px' }}>
+      <h1 className='title-phimHot'>TOP PHIM ĐƯỢC XEM NHIỀU NHẤT</h1>
+      <div className="buttons">
+        <button
+          className={activeTab === 'day' ? 'active' : ''}
+          onClick={() => handleTabClick('day')}
+        >
+          Ngày
+        </button>
+        <button
+          className={activeTab === 'week' ? 'active' : ''}
+          onClick={() => handleTabClick('week')}
+        >
+          Tuần
+        </button>
+        <button
+          className={activeTab === 'month' ? 'active' : ''}
+          onClick={() => handleTabClick('month')}
+        >
+          Tháng
+        </button>
+      </div>
+      <div className="data">
+        {activeTab === 'day' && (
+          <ul>
+            {data.data.map((item) => (
+              <li key={item.id}>
+                <img src={item.image} alt={item.movieName} onClick={() => handleImageClick(item.id)} />
+                <p>{item.movieName}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className='week-month-container'>
+        {activeTab === 'week' && randomWeekMovie && (
+          <ul>
+            <li>
+              <img src={randomWeekMovie.image} alt={randomWeekMovie.movieName} onClick={() => handleImageClick(randomWeekMovie.id)} />
+              <p>{randomWeekMovie.movieName}</p>
+            </li>
+          </ul>
+        )}
+        {activeTab === 'month' && randomMonthMovie && (
+          <ul>
+            <li>
+              <img src={randomMonthMovie.image} alt={randomMonthMovie.movieName} onClick={() => handleImageClick(randomMonthMovie.id)} />
+              <p>{randomMonthMovie.movieName}</p>
+            </li>
+          </ul>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default PhimHot;

@@ -4,10 +4,13 @@ import data from '../../data.json' // Import dữ liệu từ file data.json
 import Comment from './InformationDetail/Comment'
 import Information from './InformationDetail/Information'
 import Similar from './InformationDetail/SimilarMovie'
+import { NavLink } from 'react-router-dom';
+
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const isLoggedIn = sessionStorage.getItem('login'); // Kiểm tra xem đã đăng nhập hay chưa
 
   useEffect(() => {
     // Tìm kiếm sản phẩm theo id trong dữ liệu từ file data.json
@@ -16,7 +19,11 @@ const ProductDetail = () => {
   }, [id]);
 
   const handleClick = (itemId) => {
-    navigate(`/${itemId}`);
+    if (!isLoggedIn) {
+      navigate('/login'); // Nếu chưa đăng nhập, chuyển hướng sang trang đăng nhập
+    } else {
+      navigate(`/${itemId}`); // Nếu đã đăng nhập, cho phép xem phim
+    }
   };
 
   return (
@@ -45,8 +52,7 @@ const ProductDetail = () => {
             <p>KHỞI CHIẾU: {product.releaseDate} </p>
             <p className='description_p'>{product.description}</p>
             </div>
-            
-            {/* Và các thông tin khác... */}
+            ...
           </div>
           {/* Render các sản phẩm tương tự hoặc bình luận ở đây */}
         </>

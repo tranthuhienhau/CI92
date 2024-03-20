@@ -64,7 +64,7 @@ const Footer = () => {
         <LogoContainer>
           <div className="logo">
             <LogoImage src="https://github.com/trananhtuat/react-movie/blob/main/src/assets/tmovie.png?raw=true" alt="image footer" />
-            <LogoLink href="/">tMovies</LogoLink>
+            <LogoLink href="/">Movies Chill</LogoLink>
           </div>
         </LogoContainer>
         <FooterText>Phim chất lượng cao online của XemPhim khác biệt so với các trang phim khác ở những điểm sau:</FooterText>

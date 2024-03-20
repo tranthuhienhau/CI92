@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-  
   const navigate = useNavigate();
   const [value, setValue] = useState({
     name: "",
@@ -58,32 +57,7 @@ const Login = () => {
       }
     }
     sessionStorage.setItem('login', JSON.stringify(login));
-    if( value.useName =="admin@gmail.com" && value.password == "admin123"){
-      setErrorLogin("");
-      setTouched({
-        useName: false,
-        password: false,
-      });
-      setValue({
-        useName: "",
-        password: "",
-      });
-      toast.success("Đang chuyển sang trang admin");
-      setTimeout(() => {
-        navigate("/admin");
-      }, 1000);  
-
-    } else if (value.password.length < 6){
-      setErrorPassAgain("Mật khẩu phải chứa ít nhất 6 ký tự");
-      setValue({
-          useName: "",
-          password: "",
-      });
-      setTouched({
-          useName: false,
-          password: false,
-      })
-    } else if (count == 0 ){
+    if( count == 0){
       setErrorLogin("Thông tin tài khoản hoặc mật khẩu không chính xác")
       setTimeout(() => {
         setErrorLogin("");
@@ -96,8 +70,16 @@ const Login = () => {
         useName: "",
         password: "",
       });
-
-    } else{ 
+    } else if (value.password.length < 6){
+      setErrorPassAgain("Mật khẩu phải chứa ít nhất 6 ký tự");
+      setValue({
+          useName: "",
+          password: "",
+      });
+      setTouched({
+          useName: false,
+          password: false,
+      })} else{
       setErrorLogin("");
       setTouched({
         useName: false,
