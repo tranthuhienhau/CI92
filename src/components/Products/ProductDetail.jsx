@@ -7,9 +7,9 @@ import Similar from './InformationDetail/SimilarMovie'
 import { NavLink } from 'react-router-dom';
 
 const ProductDetail = () => {
-  const navigate = useNavigate();
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const navigate = useNavigate(); //hook từ React Router để điều hướng trang
+  const { id } = useParams(); //lấy id của sản phẩm từ url
+  const [product, setProduct] = useState(null);//để lưu trữ trạng thái sản phẩm hiện tại và hook
   const isLoggedIn = sessionStorage.getItem('login'); // Kiểm tra xem đã đăng nhập hay chưa
 
   useEffect(() => {
