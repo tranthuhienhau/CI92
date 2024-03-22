@@ -62,45 +62,41 @@ const IntroContainer = styled.div`
   .inforIntro {
     position: absolute;
     top: 140px;
-    left: 30px;
+    left: 5vw; /* Sử dụng vw cho khoảng cách từ mép trái của cửa sổ */
+    width: 90vw; /* Sử dụng vw cho chiều rộng của phần nội dung */
   }
 
   .headingIntro {
-    font-size: 60px;
+    font-size: 6vw; /* Sử dụng vw cho kích thước của tiêu đề */
     transition: all 0.3s ease;
   }
 
   .overview {
-    max-width: 550px;
+    max-width: 90vw; /* Sử dụng vw cho chiều rộng tối đa của nội dung */
     width: 100%;
     line-height: 1.3;
-    padding-top: 25px;
-    font-size: 18px;
+    padding-top: 2vw; /* Sử dụng vw cho khoảng cách trên */
+    font-size: 1.8vw; /* Sử dụng vw cho kích thước văn bản */
   }
 
   .btn {
     position: absolute;
-    height: 40px;
-    width: 40px;
-    right: 10%;
-    top: 50%;
+    height: 4vw; /* Sử dụng vw cho kích thước của nút */
+    width: 4vw;
+    right: 5vw; /* Sử dụng vw cho khoảng cách từ mép phải của cửa sổ */
+    top: 5vw; /* Sử dụng vw cho khoảng cách từ đỉnh của cửa sổ */
     cursor: pointer;
     border-radius: 50%;
-    padding: 6px;
+    padding: 1vw; /* Sử dụng vw cho kích thước của padding */
     color: #bbb;
     border: #fff solid 1px;
     transition: all 0.3s ease;
-
-    &:hover {
-      color: #fff;
-      transform: scale(1.2);
-    }
   }
   .faceBottom {
     bottom: 0;
     position: absolute;
     width: 100%;
-    height: 120px; /* Điều chỉnh chiều cao nếu cần */
+    height: 12vw; /* Sử dụng vw cho chiều cao */
     background-image: linear-gradient(
       180deg,
       transparent,
@@ -108,7 +104,22 @@ const IntroContainer = styled.div`
       rgb(17, 17, 17)
     );
   }
-  
+
+  @media (max-width: 700px) {
+    .headingIntro {
+      font-size: 8vw;
+    }
+    .overview {
+      font-size: 3vw;
+    }
+    .btn {
+      right: 2vw;
+      top: 2vw;
+    }
+    .faceBottom {
+      height: 12vw;
+    }
+  }
 `;
 
 export default Introduce;

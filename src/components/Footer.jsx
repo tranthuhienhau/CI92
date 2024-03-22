@@ -4,8 +4,14 @@ import styled from 'styled-components';
 const StyledFooter = styled.footer`
   background-color: #333;
   color: #fff;
-  padding: 40px 0;
+  padding: 40px 0; 
   text-align: center;
+  width: 100%; 
+
+  @media screen and (max-width: 700px) {
+    padding: 40px 20px; 
+    width: 100%; 
+  }
 `;
 
 const FooterContent = styled.div`
@@ -13,6 +19,9 @@ const FooterContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 1200px; 
+  width: 100%;
+  margin: 0 auto; 
 `;
 
 const LogoContainer = styled.div`
@@ -34,6 +43,7 @@ const LogoLink = styled.a`
 const FooterText = styled.p`
   font-size: 16px;
   margin-bottom: 20px;
+  
 `;
 
 const FooterList = styled.ul`
@@ -45,6 +55,8 @@ const FooterListItem = styled.li`
   margin-bottom: 10px;
   display: flex;
   align-items: flex-start;
+  text-align: justify;
+
 `;
 
 const BulletPoint = styled.span`

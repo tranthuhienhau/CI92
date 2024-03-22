@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
 import { NavLink } from 'react-router-dom';
+import { TfiAlignJustify } from "react-icons/tfi";
 
 const Navbar = () => {
     let login = sessionStorage.getItem('login') ? JSON.parse(sessionStorage.getItem('login')) : null;
@@ -12,6 +13,7 @@ const Navbar = () => {
         <div className='navbar-all-login'>
             <div className='navbar-login'>
                 <div className='navbar-opp'>
+                     
                     <NavLink className='title-web-link' to={"/"}>
                         <p className='title-web'>Movies Chill</p>
                     </NavLink>
